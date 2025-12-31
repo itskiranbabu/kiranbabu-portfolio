@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Kiran Babu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-gray: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--bg-gray);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .header-content .title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .print-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .exp-company {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .exp-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .exp-details ul {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
+            color: var(--text-dark);
+        }
+
+        .exp-details li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .resume-container {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .print-btn {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <header>
+            <div class="header-content">
+                <h1>Kiran Babu</h1>
+                <div class="title">AI Automation Architect & Full Stack Engineer</div>
+                <div class="contact-info">
+                    <a href="mailto:babu.jtek@gmail.com"><i class="fas fa-envelope"></i> babu.jtek@gmail.com</a>
+                    <a href="https://linkedin.com/in/itskiranbabu" target="_blank"><i class="fab fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="https://github.com/itskiranbabu" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://itskiranbabu.github.io/kirakirnbabu-portfolio/" target="_blank"><i
+                            class="fas fa-globe"></i> Portfolio</a>
+                </div>
+            </div>
+            <button onclick="window.print()" class="print-btn">
+                <i class="fas fa-download"></i> Save as PDF
+            </button>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Visionary AI Architect and Full Stack Engineer specializing in "Agentic Era" technologies.
+                Expert in building production-ready AI ecosystems, orchestrating multi-agent workflows, and creating
+                high-impact SaaS solutions.
+                Bridging the gap between vibe-coding creativity and enterprise-grade engineering.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>AI & Orchestration</strong>
+                    <div class="skill-tags">
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">RAG Pipelines</span>
+                        <span class="skill-tag">Agentic Workflows</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <strong>Full Stack Development</strong>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React / Next.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <strong>DevOps & Tools</strong>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Notion API</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Projects</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-title">Premium n8n Workflow Automation Suite</span>
+                    </div>
+                </div>
+                <div class="exp-details">
+                    <p>Designed and documented an enterprise-grade collection of 4,343+ production-ready automation
+                        workflows.</p>
+                    <ul>
+                        <li>Architected RAG pipelines for document processing and knowledge retrieval.</li>
+                        <li>Implemented multi-agent orchestration for complex decision-making tasks.</li>
+                        <li>Created comprehensive documentation for AI/ML, Marketing, and DevOps categories.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-title">Bhindi SaaS Clone</span>
+                    </div>
+                </div>
+                <div class="exp-details">
+                    <p>A high-performance B2B SaaS platform clone demonstrating advanced frontend engineering.</p>
+                    <ul>
+                        <li>Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance.</li>
+                        <li>Implemented responsive design patterns and modern UI components.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-title">Awesome AI Vibe Coding</span>
+                    </div>
+                </div>
+                <div class="exp-details">
+                    <p>Curated a definitive roadmap and resource collection for the "Vibe Coding" movement.</p>
+                    <ul>
+                        <li>Aggregated top resources for AI-assisted development and agentic engineering.</li>
+                        <li>Established a community hub for developers transitioning to AI-first workflows.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Certifications</h2>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-title">B.Tech in Computer Science</span>
+                    <span class="exp-date">2018 - 2022</span>
+                </div>
+                <div class="exp-details">
+                    <p>Focus on Artificial Intelligence, Data Structures, and System Architecture.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

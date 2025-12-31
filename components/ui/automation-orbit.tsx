@@ -57,19 +57,19 @@ export default function AutomationOrbit() {
                 <div className="absolute inset-0 bg-orange-500/30 blur-xl rounded-full z-10" />
             </div>
 
-            {/* Inner Orbit */}
+            {/* Inner Orbit (Core Integrations) */}
             <div className="absolute border border-white/10 rounded-full w-[280px] h-[280px]" />
-            <OrbitingIcon angle={0} radius={140} delay={0} reverse={false}><i className="fab fa-python text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={120} radius={140} delay={10} reverse={false}><i className="fas fa-database text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={240} radius={140} delay={20} reverse={false}><i className="fab fa-react text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={0} radius={140} delay={0} reverse={false}><i className="fab fa-slack text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={120} radius={140} delay={10} reverse={false}><i className="fab fa-stripe text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={240} radius={140} delay={20} reverse={false}><i className="fab fa-shopify text-xl"></i></OrbitingIcon>
 
-            {/* Outer Orbit */}
+            {/* Outer Orbit (Ecosystem) */}
             <div className="absolute border border-white/5 rounded-full w-[450px] h-[450px]" />
             <OrbitingIcon angle={0} radius={225} delay={0} reverse={true}><i className="fab fa-github text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={72} radius={225} delay={6} reverse={true}><i className="fab fa-aws text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={144} radius={225} delay={12} reverse={true}><i className="fab fa-docker text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={216} radius={225} delay={18} reverse={true}><i className="fab fa-discord text-xl"></i></OrbitingIcon>
-            <OrbitingIcon angle={288} radius={225} delay={24} reverse={true}><i className="fas fa-envelope text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={72} radius={225} delay={6} reverse={true}><i className="fab fa-salesforce text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={144} radius={225} delay={12} reverse={true}><i className="fab fa-hubspot text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={216} radius={225} delay={18} reverse={true}><i className="fab fa-google-drive text-xl"></i></OrbitingIcon>
+            <OrbitingIcon angle={288} radius={225} delay={24} reverse={true}><i className="fab fa-trello text-xl"></i></OrbitingIcon>
 
         </div>
     );

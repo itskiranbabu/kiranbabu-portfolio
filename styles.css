@@ -2452,3 +2452,12 @@ section {
     filter: blur(40px);
 }
 
+
+/* Logo Refinement */
+a.nav-brand {
+    text-decoration: none !important;
+}
+a.nav-brand:hover {
+    opacity: 0.9;
+}
+

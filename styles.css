@@ -2370,3 +2370,67 @@ section {
     z-index: 10;
     width: 100%;
 }
+/* --- AURA THEME TRANSFORMATION --- */
+:root {
+    --aura-orange: #f97316;
+    --aura-orange-glow: rgba(249, 115, 22, 0.5);
+    --aura-black: #030303;
+}
+
+.aura-card {
+    background: var(--aura-black) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.aura-card:hover {
+    border-color: var(--aura-orange) !important;
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15), inset 0 0 20px rgba(249, 115, 22, 0.05) !important;
+    transform: translateY(-5px) scale(1.01) !important;
+}
+
+.aura-beam-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.aura-beam {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    width: 1px;
+    height: 200%;
+    background: linear-gradient(180deg, transparent 0%, rgba(249, 115, 22, 0.6) 50%, transparent 100%);
+    transform: translateX(-50%);
+    opacity: 0.4;
+    filter: blur(1px);
+}
+
+.aura-glow-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Update Badges to Aura Style */
+.section-badge {
+    background: rgba(249, 115, 22, 0.1) !important;
+    border-color: rgba(249, 115, 22, 0.3) !important;
+    color: var(--aura-orange) !important;
+}
+

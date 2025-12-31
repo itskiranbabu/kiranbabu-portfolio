@@ -13,7 +13,10 @@ export default defineConfig({
         outDir: 'assets/built',
         emptyOutDir: true,
         rollupOptions: {
-            input: 'src/digital-products-hero.tsx',
+            input: {
+                'digital-products-hero': 'src/digital-products-hero.tsx',
+                'automation-orbit-entry': 'src/automation-orbit-entry.tsx'
+            },
             output: {
                 entryFileNames: '[name].js',
                 chunkFileNames: '[name]-[hash].js',

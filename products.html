@@ -2,18 +2,49 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLZGRCNKEL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QLZGRCNKEL', {
+            'page_title': 'Digital Products | Kiran Babu Portfolio'
+        });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Products | Kiran Babu - AI Automation Expert</title>
+    <title>Digital Products - Kiran Babu Portfolio</title>
+    <meta name="title" content="Digital Products - Kiran Babu Portfolio">
     <meta name="description"
-        content="Premium AI automation assets, n8n workflows, and Notion templates for businesses and creators.">
+        content="Premium AI automation suites, enterprise n8n workflows, and curated technical resources by Kiran Babu.">
+    <meta name="author" content="Kiran Babu">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itskiranbabu.github.io/portfolio/products.html">
+    <meta property="og:title" content="Digital Products - Kiran Babu Portfolio">
+    <meta property="og:description" content="Premium AI automation suites and enterprise n8n workflows.">
+    <meta property="og:image" content="https://itskiranbabu.github.io/portfolio/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Digital Products - Kiran Babu Portfolio">
+    <meta name="twitter:description" content="Premium AI automation suites and enterprise n8n workflows.">
+    <meta name="twitter:image" content="https://itskiranbabu.github.io/portfolio/assets/og-image.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="collections.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;800&display=swap"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/built/digital-products-hero.css">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -84,7 +115,7 @@
         <div class="container">
             <a href="index.html" class="nav-brand">
                 <div class="logo-icon-premium">KB</div>
-                <span>KIRAN <span class="gradient-accent">BABU</span></span>
+                <span class="gradient-accent">Kiran Babu</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -94,10 +125,16 @@
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="index.html#contact" class="btn btn-primary nav-cta">Let's Talk</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" title="Toggle Theme"
+                    aria-label="Toggle Light and Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -423,33 +460,30 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <span class="logo-icon">KB</span>
-                        <span class="logo-text">Kiran Babu</span>
-                    </a>
-                    <p>Expert AI Automation Engineer & Project Lead specialized in production-grade AI agent systems
-                        and digital product ecosystems.</p>
+                    <div class="logo-icon-premium">KB</div>
+                    <span class="gradient-accent">Kiran Babu</span>
                 </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <a href="index.html">Home</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="collections.html">Collections</a>
-                    <a href="products.html">Digital Products</a>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="social-icons">
-                        <a href="https://github.com/itskiranbabu" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/itskiranbabu" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="mailto:babu.jtek@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
+                <p>Scrum Master @ TCS | AI Automation Architect</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="collections.html">Collections</a>
+                <a href="products.html">Digital Products</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/itskiranbabu" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/itskiranbabu" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:babu.jtek@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Kiran Babu. All rights reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kiran Babu. All rights reserved.</p>
+        </div>
         </div>
     </footer>
 

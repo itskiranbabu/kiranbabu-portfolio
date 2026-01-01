@@ -2,37 +2,50 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLZGRCNKEL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-QLZGRCNKEL', {
+            'page_title': 'Resume | Kiran Babu Portfolio'
+        });
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Kiran Babu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
     <style>
         :root {
-            --primary: #3b82f6;
-            /* Blue-500 */
+            --primary: #f97316;
+            --primary-dark: #ea580c;
             --text-dark: #f1f5f9;
-            /* Slate-100 */
             --text-light: #94a3b8;
-            /* Slate-400 */
-            --bg-gray: #0f172a;
-            /* Slate-900 */
-            --bg-paper: #1e293b;
-            /* Slate-800 */
-            --border: #334155;
-            /* Slate-700 */
+            --bg-gray: #030303;
+            --bg-paper: #0a0a0a;
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             color: var(--text-dark);
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #020617;
-            /* Deep Black/Blue */
+            background: var(--bg-gray);
         }
 
         .resume-container {
@@ -53,6 +66,11 @@
         }
 
         .header-content h1 {
+            display: none;
+        }
+
+        .print-only-title {
+            display: none;
             font-size: 2.5rem;
             margin: 0 0 0.5rem 0;
             color: var(--text-dark);
@@ -239,6 +257,15 @@
                 color: #000;
             }
 
+            .digital-branding {
+                display: none !important;
+            }
+
+            .print-only-title {
+                display: block !important;
+                color: #000 !important;
+            }
+
             .header-content .title {
                 color: #2563eb;
             }
@@ -290,7 +317,16 @@
     <div class="resume-container">
         <header>
             <div class="header-content">
-                <h1>Kiran Babu</h1>
+                <div class="digital-branding"
+                    style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                    <div
+                        style="width: 45px; height: 45px; background: var(--gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; font-weight: 800;">
+                        KB</div>
+                    <h1
+                        style="margin: 0; font-size: 2.5rem; letter-spacing: -0.02em; background: linear-gradient(to right, #ffffff, #f97316); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        Kiran Babu</h1>
+                </div>
+                <h1 class="print-only-title">Kiran Babu</h1>
                 <div class="title">AI Automation Architect & Technical Scrum Master</div>
                 <div class="contact-info">
                     <a href="mailto:babu.jtek@gmail.com"><i class="fas fa-envelope"></i> babu.jtek@gmail.com</a>
@@ -495,6 +531,11 @@
                 <!-- Dates removed to avoid inaccuracy -->
             </div>
         </section>
+        <footer
+            style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-light); font-size: 0.9rem;">
+            <p>© 2026 Kiran Babu • <a href="index.html" style="color: var(--primary); text-decoration: none;">Back to
+                    Portfolio</a></p>
+        </footer>
     </div>
 </body>
 

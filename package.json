@@ -4,7 +4,9 @@
   "description": "[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://itskiranbabu.github.io/portfolio/)\r [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)\r [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/itskiranbabu)",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",

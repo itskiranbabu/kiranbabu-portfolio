@@ -15,7 +15,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 'digital-products-hero': 'src/digital-products-hero.tsx',
-                'automation-orbit-entry': 'src/automation-orbit-entry.tsx'
+                'automation-orbit-entry': 'src/automation-orbit-entry.tsx',
+                'projects-demo-entry': 'src/projects-demo-entry.tsx'
             },
             output: {
                 entryFileNames: '[name].js',

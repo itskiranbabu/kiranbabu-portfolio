@@ -355,8 +355,59 @@ class ProjectFilter {
     }
 }
 
-// Initialize Project Filter
+class BlogFilter {
+    constructor() {
+        this.filterBtns = document.querySelectorAll('.blog-categories .filter-btn');
+        this.searchInput = document.getElementById('blogSearch');
+        this.articles = document.querySelectorAll('.blog-card');
+
+        this.currentFilter = 'all';
+        this.currentSearch = '';
+
+        this.init();
+    }
+
+    init() {
+        if (!this.articles.length) return;
+
+        this.filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                this.filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                this.currentFilter = btn.getAttribute('data-filter');
+                this.filterArticles();
+            });
+        });
+
+        this.searchInput?.addEventListener('input', (e) => {
+            this.currentSearch = e.target.value.toLowerCase();
+            this.filterArticles();
+        });
+    }
+
+    filterArticles() {
+        this.articles.forEach(article => {
+            const category = article.getAttribute('data-category') || '';
+            const title = article.querySelector('.blog-title')?.textContent.toLowerCase() || '';
+            const tags = Array.from(article.querySelectorAll('.tag')).map(t => t.textContent.toLowerCase()).join(' ');
+
+            const matchesFilter = this.currentFilter === 'all' || category.includes(this.currentFilter);
+            const matchesSearch = title.includes(this.currentSearch) || tags.includes(this.currentSearch);
+
+            if (matchesFilter && matchesSearch) {
+                article.style.display = 'block';
+                setTimeout(() => article.style.opacity = '1', 10);
+            } else {
+                article.style.opacity = '0';
+                setTimeout(() => article.style.display = 'none', 500);
+            }
+        });
+    }
+}
+
+// Initialize Filters
 const projectFilter = new ProjectFilter();
+const blogFilter = new BlogFilter();
 
 // GitHub API Integration
 class GitHubAPI {
@@ -413,7 +464,9 @@ class GitHubAPI {
             'awesome-ai-vibe-coding': 'awesome-ai-vibe-coding',
             'awesome-public-apis': 'awesome-public-apis',
             'awesome-chatgpt-prompts': 'awesome-chatgpt-prompts',
-            'awesome-llm-apps': 'awesome-llm-apps'
+            'awesome-llm-apps': 'awesome-llm-apps',
+            'awesome-mcp-servers': 'awesome-mcp-servers',
+            'Gemini_AutomatorOS': 'gemini-automatoros'
         };
 
         repos.forEach(repo => {
@@ -688,3 +741,46 @@ class MultiStepForm {
 const testimonialSlider = new TestimonialSlider();
 const github = new GitHubAPI('itskiranbabu');
 const multiStepForm = new MultiStepForm();
+
+/**
+ * SkillsHub Manager
+ * Handles skill category switching and animations
+ */
+class SkillsHub {
+    constructor() {
+        this.tabs = document.querySelectorAll('.skill-tab');
+        this.grids = document.querySelectorAll('.skill-grid');
+
+        if (this.tabs.length > 0) {
+            this.init();
+        }
+    }
+
+    init() {
+        this.tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+                this.switchCategory(category, tab);
+            });
+        });
+    }
+
+    switchCategory(category, activeTab) {
+        // Update Tabs
+        this.tabs.forEach(tab => tab.classList.remove('active'));
+        activeTab.classList.add('active');
+
+        // Update Grids
+        this.grids.forEach(grid => {
+            grid.classList.remove('active');
+            if (grid.id === category) {
+                grid.classList.add('active');
+            }
+        });
+    }
+}
+
+// Initialize Skills Hub
+document.addEventListener('DOMContentLoaded', () => {
+    new SkillsHub();
+});

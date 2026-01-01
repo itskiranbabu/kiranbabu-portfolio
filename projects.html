@@ -3,12 +3,12 @@
 
 <head>
     <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLZGRCNKEL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
+        gtag('config', 'G-QLZGRCNKEL', {
             'page_title': 'Projects | Kiran Babu Portfolio'
         });
     </script>
@@ -16,12 +16,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Projects - Kiran Babu Portfolio</title>
+    <meta name="title" content="All Projects - Kiran Babu Portfolio">
     <meta name="description"
-        content="Complete portfolio of AI automation projects, SaaS platforms, and open-source contributions">
+        content="Complete portfolio of AI automation projects, SaaS platforms, and open-source contributions.">
+    <meta name="author" content="Kiran Babu">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itskiranbabu.github.io/portfolio/projects.html">
+    <meta property="og:title" content="All Projects - Kiran Babu Portfolio">
+    <meta property="og:description"
+        content="Complete portfolio of AI automation projects, SaaS platforms, and open-source contributions.">
+    <meta property="og:image" content="https://itskiranbabu.github.io/portfolio/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="All Projects - Kiran Babu Portfolio">
+    <meta name="twitter:description" content="Complete portfolio of AI automation projects and SaaS platforms.">
+    <meta name="twitter:image" content="https://itskiranbabu.github.io/portfolio/assets/og-image.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="collections.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -31,7 +55,7 @@
         <div class="container">
             <a href="index.html" class="nav-brand">
                 <div class="logo-icon-premium">KB</div>
-                <span>KIRAN <span class="gradient-accent">BABU</span></span>
+                <span class="gradient-accent">Kiran Babu</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -40,10 +64,16 @@
                 <li><a href="collections.html" class="nav-link">Collections</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" title="Toggle Theme"
+                    aria-label="Toggle Light and Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -89,18 +119,31 @@
     <section class="collection-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-star"></i>
-                    Featured Projects
-                </h2>
+                <span class="section-badge">Portfolio Deep Dive</span>
+                <h2 class="section-title">Complete Project Ecosystem</h2>
                 <p class="section-description">
-                    Highlighted projects showcasing production-ready SaaS platforms and AI automation tools
+                    Exploring the intersection of AI orchestration, Agile leadership, and production-grade automation.
                 </p>
+            </div>
+
+            <!-- Filters & Search -->
+            <div class="projects-filter-container">
+                <div class="project-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="projectSearch" placeholder="Search projects...">
+                </div>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="saas">SaaS</button>
+                    <button class="filter-btn" data-filter="opensource">Open Source</button>
+                    <button class="filter-btn" data-filter="automation">Automation</button>
+                </div>
             </div>
 
             <div class="projects-grid">
                 <!-- Bhindi SaaS Clone -->
-                <div class="project-card featured">
+                <div class="project-card featured" data-category="ai saas automation">
                     <div class="project-image">
                         <div class="project-overlay">
                             <a href="https://github.com/itskiranbabu/bhindi-saas-clone" target="_blank"
@@ -122,14 +165,45 @@
                             orchestration, tool integrations, and advanced automation. Built with modern tech stack for
                             scalability.
                         </p>
+                        <!-- Impact Metrics -->
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-users"></i>
+                                <div class="impact-details">
+                                    <span class="impact-value">500+</span>
+                                    <span class="impact-label">Active Users</span>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-clock"></i>
+                                <div class="impact-details">
+                                    <span class="impact-value">70%</span>
+                                    <span class="impact-label">Time Saved</span>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="impact-details">
+                                    <span class="impact-value">$50K</span>
+                                    <span class="impact-label">Cost Reduction</span>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-server"></i>
+                                <div class="impact-details">
+                                    <span class="impact-value">99.9%</span>
+                                    <span class="impact-label">Uptime</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-stats">
-                            <span><i class="fas fa-star"></i> 0</span>
-                            <span><i class="fas fa-code-branch"></i> 0</span>
+                            <span id="stars-bhindi-saas-clone"><i class="fas fa-star"></i> 0</span>
+                            <span id="forks-bhindi-saas-clone"><i class="fas fa-code-branch"></i> 0</span>
                             <span><i class="fas fa-circle"></i> TypeScript</span>
                         </div>
                     </div>
                     <!-- Awesome MCP Servers -->
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai opensource automation">
                         <div class="project-image">
                             <div class="project-overlay">
                                 <a href="https://github.com/itskiranbabu/awesome-mcp-servers" target="_blank"
@@ -150,16 +224,80 @@
                                 The definitive guide to Model Context Protocol (MCP) servers - Expert curation of 50+
                                 servers, SDKs, and enterprise orchestration patterns for the agentic AI era.
                             </p>
+
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <i class="fas fa-network-wired"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">50+</span>
+                                        <span class="impact-label">Servers</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-microchip"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">SDK</span>
+                                        <span class="impact-label">Support</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-stats">
-                                <span><i class="fas fa-star"></i> 0</span>
-                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span id="stars-awesome-mcp-servers"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-awesome-mcp-servers"><i class="fas fa-code-branch"></i> 0</span>
                                 <span><i class="fas fa-circle"></i> Markdown</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Awesome AI Vibe Coding -->
+                    <div class="project-card aura-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <a href="https://github.com/itskiranbabu/awesome-ai-vibe-coding" target="_blank"
+                                    class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Vibe Coding</span>
+                                <span class="tag">Open Source</span>
+                            </div>
+                            <h3 class="project-title">Awesome AI Vibe Coding</h3>
+                            <p class="project-description">
+                                A curated roadmap and repository for mastering the 'Vibe Coding' era. Blending intuitive
+                                creation with production-grade AI agent orchestration and workflow design.
+                            </p>
+
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <i class="fas fa-users"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">2.5K+</span>
+                                        <span class="impact-label">Stars</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-magic"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">100%</span>
+                                        <span class="impact-label">AI Strategy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-stats">
+                                <span id="stars-awesome-ai-vibe-coding"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-awesome-ai-vibe-coding"><i class="fas fa-code-branch"></i> 0</span>
+                                <span><i class="fas fa-magic"></i> Vibe Focus</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Awesome Public APIs -->
-                    <div class="project-card">
+                    <div class="project-card" data-category="opensource documentation">
                         <div class="project-image">
                             <div class="project-overlay">
                                 <a href="https://github.com/itskiranbabu/awesome-public-apis" target="_blank"
@@ -177,19 +315,34 @@
                             <h3 class="project-title">Awesome Public APIs</h3>
                             <p class="project-description">
                                 Enhanced collection of 1000+ free public APIs for developers - Curated with detailed
-                                documentation, code examples, and real-world use cases. Categories include AI/ML,
-                                Blockchain, Finance, and more.
+                                documentation and real-world use cases.
                             </p>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <i class="fas fa-database"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">1000+</span>
+                                        <span class="impact-label">APIs Curated</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-eye"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">50K+</span>
+                                        <span class="impact-label">Monthly Views</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-stats">
-                                <span><i class="fas fa-star"></i> 0</span>
-                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span id="stars-awesome-public-apis"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-awesome-public-apis"><i class="fas fa-code-branch"></i> 0</span>
                                 <span><i class="fas fa-circle"></i> HTML</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Awesome ChatGPT Prompts -->
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai opensource">
                         <div class="project-image">
                             <div class="project-overlay">
                                 <a href="https://github.com/itskiranbabu/awesome-chatgpt-prompts" target="_blank"
@@ -207,19 +360,34 @@
                             <h3 class="project-title">Awesome ChatGPT Prompts</h3>
                             <p class="project-description">
                                 Share, discover, and collect prompts from the community. Free and open source —
-                                self-host
-                                for your organization with complete privacy. Growing collection of effective prompts.
+                                self-host for your organization with complete privacy.
                             </p>
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <i class="fas fa-comment-alt"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">200+</span>
+                                        <span class="impact-label">Prompts</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-download"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">10K+</span>
+                                        <span class="impact-label">Downloads</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-stats">
-                                <span><i class="fas fa-star"></i> 0</span>
-                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span id="stars-awesome-chatgpt-prompts"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-awesome-chatgpt-prompts"><i class="fas fa-code-branch"></i> 0</span>
                                 <span><i class="fas fa-circle"></i> JavaScript</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Awesome LLM Apps -->
-                    <div class="project-card">
+                    <div class="project-card" data-category="opensource ai llm">
                         <div class="project-image">
                             <div class="project-overlay">
                                 <a href="https://github.com/itskiranbabu/awesome-llm-apps" target="_blank"
@@ -240,16 +408,33 @@
                                 and
                                 opensource models. Practical examples and implementation guides.
                             </p>
+
+                            <div class="project-impact">
+                                <div class="impact-item">
+                                    <i class="fas fa-cubes"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">50+</span>
+                                        <span class="impact-label">AI Apps</span>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <div class="impact-details">
+                                        <span class="impact-value">RAG</span>
+                                        <span class="impact-label">Engine</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-stats">
-                                <span><i class="fas fa-star"></i> 0</span>
-                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span id="stars-awesome-llm-apps"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-awesome-llm-apps"><i class="fas fa-code-branch"></i> 0</span>
                                 <span><i class="fas fa-circle"></i> Python</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Gemini AutomatorOS -->
-                    <div class="project-card">
+                    <div class="project-card" data-category="ai automation">
                         <div class="project-image">
                             <div class="project-overlay">
                                 <a href="https://github.com/itskiranbabu/Gemini_AutomatorOS" target="_blank"
@@ -271,8 +456,8 @@
                                 with advanced AI capabilities.
                             </p>
                             <div class="project-stats">
-                                <span><i class="fas fa-star"></i> 0</span>
-                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span id="stars-gemini-automatoros"><i class="fas fa-star"></i> 0</span>
+                                <span id="forks-gemini-automatoros"><i class="fas fa-code-branch"></i> 0</span>
                                 <span><i class="fas fa-circle"></i> Python</span>
                             </div>
                         </div>
@@ -462,19 +647,23 @@
         </div>
     </section>
 
+    <!-- Tech Stack Showcase (React Powered) -->
+    <section class="tech-stack-showcase" style="background: var(--dark); padding: 0 0 6rem 0;">
+        <div class="container">
+            <div id="projects-demo-root" style="min-height: 400px;"></div>
+        </div>
+    </section>
+
     <!-- Modern Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand-col">
                     <div class="footer-brand">
-                        <i class="fas fa-code"></i>
-                        <span>Kiran Babu</span>
+                        <div class="logo-icon-premium">KB</div>
+                        <span class="gradient-accent">Kiran Babu</span>
                     </div>
-                    <p class="footer-bio">
-                        Technical Scrum Master @ TCS | Enterprise Agile Leadership | AI-Driven Solutions | Product
-                        Innovation | Digital Transformation Expert
-                    </p>
+                    <p>Scrum Master @ TCS | AI Automation Architect</p>
                     <div class="footer-social">
                         <a href="https://github.com/itskiranbabu" target="_blank" aria-label="GitHub"><i
                                 class="fab fa-github"></i></a>
@@ -516,7 +705,7 @@
 
             <div class="footer-bottom">
                 <p class="footer-copyright">
-                    © 2025 Kiran Babu. All rights reserved.
+                    © 2026 Kiran Babu. All rights reserved.
                 </p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
@@ -527,6 +716,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module" src="assets/built/projects-demo-entry.js"></script>
 </body>
 
 </html>

@@ -117,6 +117,7 @@ const PRODUCTS = [
     { title: "Automation Blueprint", src: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=300", link: "https://itskiranbabu.github.io/n8n-workflows/" },
 ];
 const IMAGES = PRODUCTS.map(p => p.src); // Keep for compatibility if needed elsewhere
+const MAX_SCROLL = 3000; // Total vertical space for animation stages
 
 // Helper for linear interpolation
 const lerp = (start: number, end: number, t: number) => start * (1 - t) + end * t;
